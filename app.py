@@ -8,7 +8,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 st.title("""DIabetic Prediction App which we design using Machine Learning and for the prediction of the diabetes in the patient""")
 # I am going to load my model
 rf_mod=pickle.load(open('model_rf.pkl', 'rb'))
-I=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin',
+l=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin',
        'BMI', 'DiabetesPedigreeFunction', 'Age']
 
 # create empty dict to take input from user
@@ -27,5 +27,6 @@ if st.button('Predict the health status of the patient'):
         st.subheader(f'The predicted health status of the patient isNon-Diabetic)')
     else:
         st.subheader(f'The predicted health status of the patient is: {result[0]} (Diabetic)')
+
 
         
